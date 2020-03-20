@@ -9,9 +9,6 @@
 name: Build OpenWrt
 
 on:
-  push:
-    branches:
-      - master
   watch:
     types: [started]
 
