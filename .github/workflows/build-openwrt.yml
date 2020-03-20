@@ -9,6 +9,11 @@
 name: Build OpenWrt
 
 on:
+  release:
+    types: [published]
+  push:
+    branches:
+      - master
   watch:
     types: [started]
 
@@ -18,7 +23,7 @@ env:
   CONFIG_FILE: .config
   DIY_SH: diy.sh
   FREE_UP_DISK: false
-  SSH_ACTIONS: true
+  SSH_ACTIONS: false
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   TZ: Asia/Shanghai
