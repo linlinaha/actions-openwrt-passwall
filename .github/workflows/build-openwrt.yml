@@ -78,7 +78,7 @@ jobs:
       id: package
       run: |
         cd openwrt
-        make download -j8
+        make -j8 download v=s
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
 
